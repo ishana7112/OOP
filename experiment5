@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+class MyClass {
+private:
+    int data;
+
+public:
+   
+    MyClass(int d) {
+        data = d;
+    }
+
+    
+    void display();
+};
+
+
+void MyClass::display() {
+    cout << "Data: " << data << endl;
+}
+
+int main() {
+    MyClass obj(10);
+    obj.display();
+    return 0;
+}
