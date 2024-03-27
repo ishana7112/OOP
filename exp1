@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    int validCount = 0;
+
+    cout << "Enter the number: " << endl;
+    while (cin >> number) {
+        if (number % 8 == 0) {
+            validCount++;
+        } else {
+            break; 
+        }
+        cout << "Enter the number: " << endl;
+    }
+
+    cout << "Total " << validCount << " numbers are valid numbers." << endl;
+
+    return 0;
+}
+ 
