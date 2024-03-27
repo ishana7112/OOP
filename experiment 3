@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+class Room {
+private:
+    float length;
+    float breadth;
+
+public:
+    
+    void get() {
+        cout << "Enter length of the room: ";
+        cin >> length;
+        cout << "Enter breadth of the room: ";
+        cin >> breadth;
+    }
+
+   
+    void display() {
+        cout << "Length: " << length << " Breadth: " << breadth << endl;
+    }
+
+    
+    float area() {
+        return length * breadth;
+    }
+
+   
+    float perimeter() {
+        return 2 * (length + breadth);
+    }
+};
+
+int main() {
+    const int numRooms = 5;
+    Room rooms[numRooms]; 
+
+    
+    for (int i = 0; i < numRooms; ++i) {
+        cout << "Enter details for Room " << i + 1 << endl;
+        rooms[i].get();
+    }
+
+   
+    for (int i = 0; i < numRooms; ++i) {
+        cout << "Room " << i + 1 << " - ";
+        rooms[i].display();
+        cout << "Area: " << rooms[i].area() << " Perimeter: " << rooms[i].perimeter() << endl;
+    }
+
+    return 0;
+}
