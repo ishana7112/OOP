@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+
+int sumOfSeries(int n) {
+    int sum = 0;
+    for (int i = 1; i <= n; i++) {
+        sum += (i * (i + 1)) / 2;  
+    }
+    return sum;
+}
+
+int main() {
+    int n;
+    
+    
+    do {
+        cout << "Enter a positive integer: ";
+        cin >> n;
+    } while (n <= 0);
+
+    int result = sumOfSeries(n);
+    cout << "Sum of the series: " << result << endl;
+
+    return 0;
+}
