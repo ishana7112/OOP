@@ -1,0 +1,53 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Number {
+private:
+    int decimal;
+
+public:
+    
+    Number(int num) {
+        decimal = num;
+    }
+
+   
+    vector<int> decimalToBinary() {
+        vector<int> binary;
+        int num = decimal;
+        
+       
+        if (num == 0) {
+            binary.push_back(0);
+        }
+        
+        while (num > 0) {
+            binary.push_back(num % 2);
+            num /= 2;
+        }
+
+        
+   
+
+        return binary;
+    }
+};
+
+int main() {
+    int num;
+    cout << "Enter a decimal number: ";
+    cin >> num;
+
+    Number n(num);
+
+    vector<int> binary = n.decimalToBinary();
+
+    cout << "Binary representation: ";
+    for (int digit : binary) {
+        cout << digit;
+    }
+    cout << endl;
+
+    return 0;
+}
